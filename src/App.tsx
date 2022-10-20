@@ -1132,13 +1132,31 @@ const charResponce = [
 
 
 function App() {
-  return <>
-    <div>
-    <CharGalery charecterList={charResponce}/>
+    const [a, setA] = useState<number>(0);
 
-  </div>
+    console.log("App")
+    console.log(a)
 
-</>
+    const onButtonAClick = () => {
+        setA(a+1)
+    }
+return (
+    <div className={"App"}>
+        {a}
+        <button onClick={onButtonAClick}>Click Me!</button>
+    </div>
+
+)
 }
 
 export default App;
+//   return <>
+//     <div>
+//     <CharGalery charecterList={charResponce}/>
+//
+//   </div>
+//
+// </>
+// }
+
+
